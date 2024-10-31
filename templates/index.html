@@ -7,32 +7,47 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Cabeçalho -->
+    <header>
         <h1>Conversor de Moedas</h1>
-        <form method="POST">
-            <label for="moeda_base">Moeda Base:</label>
-            <select id="moeda_base" name="moeda_base">
-                <option value="1">Real (BRL)</option>
-                <option value="2">Dólar (USD)</option>
-                <option value="3">Euro (EUR)</option>
-            </select>
+        <div class="logo">
+            <img src="/static/logo.png" alt="Logo do Conversor de Moedas">
+        </div>
+    </header>
 
-            <label for="moeda_alvo">Moeda Alvo:</label>
-            <select id="moeda_alvo" name="moeda_alvo">
-                <option value="1">Real (BRL)</option>
-                <option value="2">Dólar (USD)</option>
-                <option value="3">Euro (EUR)</option>
-            </select>
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+            <form method="POST">
+                <label for="moeda_base">Moeda Base:</label>
+                <select id="moeda_base" name="moeda_base">
+                    <option value="1">Real (BRL)</option>
+                    <option value="2">Dólar (USD)</option>
+                    <option value="3">Euro (EUR)</option>
+                </select>
 
-            <label for="valor">Valor:</label>
-            <input type="number" id="valor" name="valor" step="0.01" required>
+                <label for="moeda_alvo">Moeda Alvo:</label>
+                <select id="moeda_alvo" name="moeda_alvo">
+                    <option value="1">Real (BRL)</option>
+                    <option value="2">Dólar (USD)</option>
+                    <option value="3">Euro (EUR)</option>
+                </select>
 
-            <button type="submit">Converter</button>
-        </form>
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" name="valor" step="0.01" required>
 
-        {% if resultado %}
-            <div class="resultado">{{ resultado }}</div>
-        {% endif %}
-    </div>
+                <button type="submit">Converter</button>
+            </form>
+
+            {% if resultado %}
+                <div class="resultado">{{ resultado }}</div>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Todos os direitos reservados | Criado por Danyllo Aniceto, Pedro Cruz, Matheus Silva</p>
+    </footer>
 </body>
 </html>

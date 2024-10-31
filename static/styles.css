@@ -1,67 +1,103 @@
+/* Reset básico */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-body {
-    background-color: #f5f5f5;
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+/* Estilo do Header */
+header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #4CAF50;  /* Cor verde chamativa */
+    font-family: 'Arial Black', sans-serif;
+}
+
+header .logo img {
+    max-width: 80px;
+    height: auto;
+}
+
+/* Estilo do Main */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
     width: 100%;
-    max-width: 400px;
     text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
+/* Estilo dos inputs e botão */
 label {
     display: block;
-    margin-top: 1rem;
+    margin: 10px 0 5px;
+    color: #333;
     font-weight: bold;
 }
 
-select, input {
+input[type="number"], select {
     width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
 button {
-    margin-top: 1.5rem;
     width: 100%;
-    padding: 0.75rem;
+    padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1.1em;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
+/* Estilo do Resultado */
 .resultado {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
+    margin-top: 20px;
+    font-size: 1.2em;
     color: #333;
+}
+
+/* Estilo do Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    color: #555;
+    font-size: 0.9em;
+    width: 100%;
 }
